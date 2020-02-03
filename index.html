@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Google Maps Simulator</title>
+
+        <script src="vendors/p5js/p5.js"></script>
+        <script src="vendors/p5js/p5.dom.js"></script>
+
+        <script
+            src="vendors/jQuery/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+        <script src="js/script.js"></script>
+        <script src="js/sketch.js"></script>
+
+        <style type="text/css">
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+
+                /* This centers our sketch horizontally. */
+                justify-content: center;
+
+                /* This centers our sketch vertically. */
+                align-items: center;
+            }
+            #control {
+                display: flex;
+                align-items: center;
+                margin: auto;
+            }
+            canvas {
+                border: 2px solid black;
+                /* border-radius: 10px; */
+            }
+            button {
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+            .selected {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="control">
+            <button id="createGraph" class="selected">Create Graph</button>
+            <button id="selectStartNode">Select Start Node</button>
+            <button id="selectEndNode">Select End Node</button>
+            <select id="selectedAlgo">
+                <option>Dijkstra's Algorithm</option>
+            </select>
+            <button id="runAlgorithm">Run Algorithm</button>
+        </div>
+        <div id="canvas"></div>
+    </body>
+</html>
